@@ -8,3 +8,9 @@ steps to follow
 - FireBase to Deploy      (firebase login , firebase init , build then , firebase deploy)
 - created a user
 - added redux-store userSlice  to save user details
+
+- fetch movies and build browse page
+- get movie data tmdb api  and register.
+
+
+

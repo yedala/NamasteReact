@@ -6,6 +6,7 @@ import { auth } from "../utils/firebase";
 import {useNavigate} from "react-router-dom"
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BACKGROUND } from "../utils/constants";
 
 const Login = () => {
     const [isSignIn, setisSignIn] = useState(true);
@@ -39,7 +40,6 @@ const Login = () => {
                         // An error occurred
                         // ...
                       });
-                    navigate("/browse")
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -53,7 +53,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    navigate("/browse")
                     // ...
                 })
                 .catch((error) => {
@@ -66,7 +65,7 @@ const Login = () => {
     return (
         <><Header />
             <div className="absolute">
-                <img src="https://assets.nflxext.com/ffe/siteui/vlv3/ff5587c5-1052-47cf-974b-a97e3b4f0656/065df910-dec3-46ae-afa8-7ad2b52dce40/IN-en-20240506-popsignuptwoweeks-perspective_alpha_website_medium.jpg" alt="background" />
+                <img src={BACKGROUND} alt="background" />
 
             </div>
             <form onClick={(e) => e.preventDefault()} className="w-3/12 absolute p-12  bg-black my-56 mx-auto right-0 left-0 bg-opacity-65 ">
