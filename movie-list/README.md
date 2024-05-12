@@ -11,6 +11,7 @@ steps to follow
 
 - fetch movies and build browse page
 - get movie data tmdb api  and register.
+- create background video and title
 
 
 
